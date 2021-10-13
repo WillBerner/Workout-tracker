@@ -1,7 +1,14 @@
 const router = require('express').Router();
 
+const Workout = require('../models/Workout.js');
+
 router.get("/api/workouts", ({body}, res) => {
-    res.json({ message: "workouts get success!" })
+    Workout.find({})
+    .then(workouts => {
+        res.json(workouts)
+    }).catch(err => {
+        res.json(err);
+    });
 });
 
 router.put("/api/workouts/:id", ({body}, res) => {
@@ -9,7 +16,7 @@ router.put("/api/workouts/:id", ({body}, res) => {
 });
 
 router.post("/api/workouts", ({body}, res) => {
-    // res.json({ message: "workouts post success!" })
+    res.json({ message: "workouts post success!" })
 });
 
 router.get("/api/workouts/range", ({body}, res) => {
