@@ -19,6 +19,14 @@ app.use(express.static("public"));
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
     useNewUrlParser: true,
     useFindAndModify: false
+});
+
+// Serve static html files
+app.get('/exercise', (req, res) => {
+    res.sendFile(__dirname + "/public/exercise.html");
+});
+app.get('/stats', (req, res) => {
+    res.sendFile(__dirname + "/public/stats.html");
 })
 
 // Connect routes
@@ -26,5 +34,5 @@ app.use(require("./routes/api.js"));
 
 // Start the server up
 app.listen(PORT, () => {
-    console.log(`App running at localhost:${PORT}`);
+    console.log(`App running at http://localhost:${PORT}`);
 });

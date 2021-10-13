@@ -3,12 +3,14 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const WorkoutSchema = new Schema({
+    
     day: {
         type: Date,
         default: Date.now
     },
     exercises: [
         {
+            _id: false,
             type: {
                 type: String,
                 require: "Error: Please include an exercise type, either cardio or resistance"
