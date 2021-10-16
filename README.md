@@ -1,19 +1,27 @@
-# Workout-tracker
+# [Workout Tracker](https://workout-tracker-mongo-app.herokuapp.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Employee Tracker is a content management system for keeping track of departments, positions (roles), and employees for any organization. The application is built with Node.js and MySQL and makes use of mysql2, Inquirer, and console.table npm packages.
+Workout Tracker is an application for tracking users' workouts and progress across their previous seven workouts. Workout tracker was built with Node.js and MongoDB, using Mongoose to model the schema and interact with the database.
 
 
 ## Table of Contents
    
-* [Installation Instructions](#installation-instructions)
 * [Usage Instructions](#usage-instructions)
 * [Contributions](#contributions)
 * [Questions](#questions)
 
-## Installation Instructions
-
 ## Usage Instructions
+
+Navigate to the live application by clicking on the title of this readme or the link [here]
+(https://workout-tracker-mongo-app.herokuapp.com/)
+
+Create a new workout by selecting the "New Workout" button, or continue with a workout you're currently doing by selecting the "Continue Workout" button.
+
+From here add information about whatever exercises you have done, either cardio or resistance, along with the duration of each exercise and other pertinent information such as the name, distance, weight, etc.
+
+View progress and data from up to seven of your past workouts by going to your dashboard via the "Dashboard" button in the header of the application.
+
+View your current or most recent workout information via the homepage, showing the total amount of weight you've lifted, the total distance you've gone, the number of exercises you've done, as well as the total duration of that workout.
 
 ## Contributions
 
